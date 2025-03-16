@@ -16,7 +16,7 @@ export const Navbar = () => {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1">
         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white sm:flex ">
           <p className="mr-2">Astronomía UC: </p>
-          <p> {title}</p>
+          <p className="mr-2 text-blue-300">{title}</p>
         </span>
 
           <div className="ml-auto flex items-center">
@@ -29,7 +29,7 @@ export const Navbar = () => {
                 aria-controls="navbar-hamburger"
                 aria-expanded={isMenuOpen}
             >
-              <span className="sr-only">Open main menu</span>
+              <span className="sr-only">Abrir Menú</span>
               <svg
                   className="w-5 h-5"
                   aria-hidden="true"
@@ -57,24 +57,24 @@ export const Navbar = () => {
                 <div
                     className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                     onClick={() => {
-                      setTitle("Malla: C020101");
+                      setTitle("Malla - C020101");
                       handleReset();
                       toggleMenu();
                     }}
                 >
-                  Malla: C020101 (&gt;2022)
+                  Astronomía: Malla C020101 (&gt;2022)
                 </div>
               </li>
               <li>
                 <div
                     className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                     onClick={() => {
-                      setTitle("Malla Modificada");
+                      setTitle("Malla - C020101 (Modificada)");
                       toggleMenu();
                       handleReset();
                     }}
                 >
-                  Malla Modificada (Admitidos Segundo Semestre)
+                  Astronomía: Malla C020101 (Modificada - Admitidos Segundo Semestre)
                 </div>
               </li>
             </ul>

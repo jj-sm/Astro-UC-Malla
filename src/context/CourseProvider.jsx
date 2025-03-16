@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { CourseContext } from "./CourseContext";
-import { ramos2016, ramos2023 } from "../utils";
+import { ramos20221, ramos20222 } from "../utils";
 
 //get info from localStorage
 const storedFinishedCourses =
   JSON.parse(localStorage.getItem("finishedCourses")) || [];
 const credits = JSON.parse(localStorage.getItem("credits")) || 0;
-const stored = JSON.parse(localStorage.getItem("stored")) || "Malla Nueva";
+const stored = JSON.parse(localStorage.getItem("stored")) || "Malla C020101";
 
 export const CourseProvider = ({ children }) => {
   //set info from localStorage
@@ -15,7 +15,7 @@ export const CourseProvider = ({ children }) => {
   const [title, setTitle] = useState(stored);
 
   // use malla selected
-  const data = title === "Malla: " ? ramos2023 : ramos2016;
+  const data = title === "Malla - C020101" ? ramos20221 : ramos20222;
 
   // divide courses by semester
   const coursesBySemesterAndYear = data.reduce((acc, course) => {

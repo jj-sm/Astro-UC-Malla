@@ -18,11 +18,11 @@ import {
 
 // C020101
 
-export const ramos2023 = [
+export const ramos20221 = [
   {
     id: 1,
     code: "AST111",
-    course: "Astronomía 0",
+    course: "Astro 0",
     semester: "I",
     year: 1,
     cc: AST,
@@ -153,20 +153,20 @@ export const ramos2023 = [
     lab: false,
     yearly: 0,
   },
-    // 2ND YEAR
-    // 1ST SEMESTER
+  // 2ND YEAR
+  // 1ST SEMESTER
   {
     id: 12,
     code: "AST211",
-    course: "Introducción al Análisis de Datos",
+    course: "Introducción al Análisis de Datos", //Intro al anali. datos AST211 Yr 2, sem 1, lab: false, yearly:1
     semester: "I",
     year: 2,
     cc: AST,
     cr: 10,
     req: [
-        {id: 3, cc: MAT },
-        {id: 4, cc: IIC },
-        {id: 1, cc: AST }],
+      {id: 3, cc: MAT },
+      {id: 4, cc: IIC },
+      {id: 1, cc: AST }],
     lab: false,
     yearly: 1,
   },
@@ -226,7 +226,7 @@ export const ramos2023 = [
     yearly: 0,
   },
 
-    // 2nd Semester
+  // 2nd Semester
   {
     id: 17,
     code: "AST221",
@@ -293,8 +293,8 @@ export const ramos2023 = [
     lab: false,
     yearly: 0,
   },
-    // 3rd Year
-    // 1st Semester
+  // 3rd Year
+  // 1st Semester
   {
     id: 22,
     code: "AST0311",
@@ -364,7 +364,7 @@ export const ramos2023 = [
     lab: false,
     yearly: 0,
   },
-    // 2nd Semester
+  // 2nd Semester
   {
     id: 27,
     code: "AST0321",
@@ -432,8 +432,8 @@ export const ramos2023 = [
     lab: false,
     yearly: 0,
   },
-    // 4th year
-    // 1st semester
+  // 4th year
+  // 1st semester
   {
     id: 32,
     code: "AST0411",
@@ -498,7 +498,7 @@ export const ramos2023 = [
     lab: false,
     yearly: 0,
   },
-    // 2nd Semester
+  // 2nd Semester
   {
     id: 37,
     code: "AST411",
@@ -549,7 +549,7 @@ export const ramos2023 = [
     lab: false,
     yearly: 0,
   },
-    // Final year
+  // Final year
   {
     id: 41,
     code: "AST511",
