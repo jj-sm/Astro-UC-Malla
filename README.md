@@ -46,6 +46,12 @@ This is an app that has an interactive university curriculum for the degree in a
 
 Loreto Ñancucheo - [@loretonancucheo](https://twitter.com/loretonancucheo) - loreto.nancucheo@gmail.com
 
+### Updated, modified and formatted by:
+Juan José Sánchez - [@juanjo.jpg](http://instagram.com/juanjo.jpg/) [email](mailto:juanjose.sm@icloud.com) - 🔭:
+
+#### About me
+Astronomy Student at PUC. If you need to contact me, mail me or dm me on ig!
+
 ### Built With
 
 <div style="display: flex; gap: 4px;">
@@ -133,6 +139,5 @@ Follow thw steps bellow to contribute:
 - [Flowbite](https://flowbite.com/)
 - [Google Fonts](https://fonts.google.com/)
 
-## About Me
-Astronomy Student at PUC. If you need to contact me, mail me or dm me on ig!
-Made by Juan José Sánchez - [@juanjo.jpg](http://instagram.com/juanjo.jpg/) [email](mailto:juanjose.sm@icloud.com) - :heart:
+
+Made with ❤️
