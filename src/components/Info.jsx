@@ -27,7 +27,7 @@ export const Info = () => {
                     vas aprobando ramos, se van liberando los que tienen prerrequisitos
                 </div>
                 <div className="w-80 ">
-                    <img src="/course-info.png" />
+                    <img src={`${import.meta.env.BASE_URL}course-info.png`} />
                 </div>
             </div>
             <hr className="w-full my-4 border-gray-300" />

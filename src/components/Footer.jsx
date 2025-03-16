@@ -12,7 +12,7 @@ export const Footer = () => {
                     Adapted, updated and formatted by <span className="font-bold"> jj-sm</span> (Astro)
                 </p>
                 <img
-                    src="/github-black.svg"
+                    src={`${import.meta.env.BASE_URL}github-black.svg`}
                     alt="github logo"
                     className="w-5 ml-2"
                 />
