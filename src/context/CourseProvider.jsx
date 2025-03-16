@@ -15,7 +15,7 @@ export const CourseProvider = ({ children }) => {
   const [title, setTitle] = useState(stored);
 
   // use malla selected
-  const data = title === "Malla Nueva" ? ramos2023 : ramos2016;
+  const data = title === "Malla: " ? ramos2023 : ramos2016;
 
   // divide courses by semester
   const coursesBySemesterAndYear = data.reduce((acc, course) => {
