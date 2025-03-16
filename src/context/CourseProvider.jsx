@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { CourseContext } from "./CourseContext";
-import { ramos20221, ramos20222 } from "../utils";
+import {ramos20221, ramos20222, ramosFiz2022} from "../utils";
 
 //get info from localStorage
 const storedFinishedCourses =
@@ -14,8 +14,12 @@ export const CourseProvider = ({ children }) => {
   const [totalCredits, setTotalCredits] = useState(credits);
   const [title, setTitle] = useState(stored);
 
-  // use malla selected
-  const data = title === "Malla - C020101" ? ramos20221 : ramos20222;
+  const data =
+      title === "Malla - C020101" ? ramos20221 :
+          title === "Malla - C020101 (Modificada)" ? ramos20222 :
+              title === "Malla - FIZ - >2022" ? ramosFiz2022 :
+                  ramos20221; // Default fallback (optional)
+
 
   // divide courses by semester
   const coursesBySemesterAndYear = data.reduce((acc, course) => {

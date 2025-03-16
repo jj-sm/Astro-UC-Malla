@@ -77,6 +77,18 @@ export const Navbar = () => {
                   Astronomía: Malla C020101 (Modificada - Admitidos Segundo Semestre)
                 </div>
               </li>
+                <li>
+                    <div
+                        className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                        onClick={() => {
+                            setTitle("Malla - FIZ - >2022");
+                            handleReset();
+                            toggleMenu();
+                        }}
+                    >
+                        Física: Malla (&gt;2022)
+                    </div>
+                </li>
             </ul>
           </div>
         </div>

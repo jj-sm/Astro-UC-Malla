@@ -138,7 +138,7 @@ export const ramos20222 = [
     cc: MAT,
     cr: 10,
     req: [],
-    lab: false,
+    lab: true,
     yearly: 0,
   },
   // 2ND YEAR
@@ -180,7 +180,7 @@ export const ramos20222 = [
     req: [
       {id: 9, cc: MAT },
       {id: 10, cc: MAT }],
-    lab: false,
+    lab: true,
     yearly: 0,
   },
   {
