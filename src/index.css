@@ -4,7 +4,11 @@
 
 @layer components {
   .course-code{
-    @apply rounded-full  h-4 w-4 flex justify-center items-center text-xs;
+    @apply rounded-full h-4 w-4 flex justify-center items-center text-xs;
+  }
+
+  .course-lab{
+    @apply rounded-full bg-green-300 h-4 w-4 flex justify-center items-center text-xs;
   }
 }
 
