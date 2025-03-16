@@ -26,7 +26,7 @@ export const Info = () => {
                     Puedes tachar tus ramos aprobados haciendo click en ellos. A medida que
                     vas aprobando ramos, se van liberando los que tienen prerrequisitos
                 </div>
-                <div className="w-80 ">
+                <div className="max-w-lg">
                     <img src={`${import.meta.env.BASE_URL}course-info-new.png`} />
                 </div>
             </div>
