@@ -172,7 +172,7 @@ export const ramosFiz2022 = [
     code: "MAT1630",
     course: "Cálculo III",
     semester: "I",
-    year: 1,
+    year: 2,
     cc: MAT,
     cr: 10,
     req: [
