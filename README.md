@@ -1,13 +1,13 @@
-# Interactive University Curriculum
+# Curriculum Astro-UC
 
 <div align="center">
   <p align="center">
-    <a href="https://malla-interactiva-fono.netlify.app/" target="_blank">Demo</a>
+    <a href="https://jj-sm.github.io/Astro-UC-Malla/" target="_blank">Demo</a>
     ·
     <!--  
     <a href="#" target="_blank">Video</a>
     · -->
-    <a href="https://github.com/loretito/malla-interactiva-uc" target="_blank">Code</a>
+    <a href="https://github.com/jj-sm/Astro-UC-Malla" target="_blank">Code</a>
   </p>
 </div>
 
@@ -31,9 +31,6 @@
     <li><a href="#contributions">Contributions</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
     <li><a href="#contact">Contact</a>
-        <ul>
-        <li><a href="#support-me">Support Me</a></li>
-      </ul>
     </li>
 
   </ol>
@@ -43,7 +40,11 @@
 
 ![malla-interactiva](public/readme/malla.png)
 
-This is an app that has an interactive university curriculum for the degree in speech-language pathology (fonoaudiología) at UC
+This is an app that has an interactive university curriculum for the degree in astronomy and physics at UC (Pontificic Catholic University of Chile). The original repository for this porject is located [here](https://github.com/loretito/malla-interactiva-uc). Then it was modified by me ([jj-sm](https://github.com/jj-sm)) adding new functionalities and adapting it to the Physics and Astronomy Curriculums
+
+### Originally Made by:
+
+Loreto Ñancucheo - [@loretonancucheo](https://twitter.com/loretonancucheo) - loreto.nancucheo@gmail.com
 
 ### Built With
 
@@ -91,6 +92,12 @@ yarn dev
 yarn build
 ```
 
+5. Deploy
+   After setting up the deploy proccess.
+```bash
+yarn deploy
+```
+
 ## Roadmap
 
 - [x] Select/Unselect a course
@@ -98,8 +105,12 @@ yarn build
 - [x] Select/Unselect by year
 - [x] Unlock courses as prerequisites are met
 - [x] Display the percentage of approved courses/credits
-- [x] Switch between the old and new university curriculum
+- [x] Switch between different curriculums
 - [x] Store selections in localStorage
+- [x] See whether the semester is odd or even (It is taught at the first or second half of the year)
+- [x] Check whether the course has a Lab.
+- [x] Reorder Colors
+- [ ] Allow Import of Custom Curriculums
 
 ## Contributions
 
@@ -121,15 +132,5 @@ Follow thw steps bellow to contribute:
 
 - [Flowbite](https://flowbite.com/)
 - [Google Fonts](https://fonts.google.com/)
-
-## Contact
-
-Loreto Ñancucheo - [@loretonancucheo](https://twitter.com/loretonancucheo) - loreto.nancucheo@gmail.com
-
-### Support Me
-
-<a href='https://www.buymeacoffee.com/loretonancucheo' target="_blank"><img src='https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png' height='45' alt='buymeacoffe-loreto'/></a>
-
-Don't forget to give the project a star!
 
 Thanks :heart:
