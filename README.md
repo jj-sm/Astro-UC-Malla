@@ -38,7 +38,7 @@
 
 ## About The Project
 
-![malla-interactiva](public/readme/malla.png)
+<img width="984" alt="image" src="https://github.com/user-attachments/assets/1a0a6026-b31f-44e9-9e68-cf52b18318e5" />
 
 This is an app that has an interactive university curriculum for the degree in astronomy and physics at UC (Pontificic Catholic University of Chile). The original repository for this porject is located [here](https://github.com/loretito/malla-interactiva-uc). Then it was modified by me ([jj-sm](https://github.com/jj-sm)) adding new functionalities and adapting it to the Physics and Astronomy Curriculums
 
@@ -133,4 +133,6 @@ Follow thw steps bellow to contribute:
 - [Flowbite](https://flowbite.com/)
 - [Google Fonts](https://fonts.google.com/)
 
-Thanks :heart:
+## About Me
+Astronomy Student at PUC. If you need to contact me, mail me or dm me on ig!
+Made by Juan José Sánchez - [@juanjo.jpg](http://instagram.com/juanjo.jpg/) [email](mailto:juanjose.sm@icloud.com) - :heart:
