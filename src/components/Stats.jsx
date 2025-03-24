@@ -15,7 +15,7 @@ export const Stats = () => {
     const { totalCreditsRequired, totalCourses } = curriculumStats[title] || curriculumStats["Malla - C020101"];
 
     return (
-        <div className="text-center mt-7 mb-7">
+        <div className="text-center -mt-2 mb-7">
             <h2 className="font-bold text-xl">Estadísticas</h2>
             <div className="flex justify-center mt-4">
                 <div className="flex mr-12">

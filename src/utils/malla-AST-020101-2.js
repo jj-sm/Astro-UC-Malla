@@ -539,7 +539,7 @@ export const ramos20222 = [
   {
     id: 37,
     code: "AST411",
-    course: "Astrofísica Experimental",
+    course: "Astrofísica Experimental**",
     semester: "II",
     year: 5,
     cc: AST,

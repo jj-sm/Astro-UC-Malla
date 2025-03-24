@@ -6,3 +6,4 @@ export * from "./Semesters";
 export * from "./Stats";
 export * from "./Info";
 export * from "./Malla";
+export * from "./Welcome";
