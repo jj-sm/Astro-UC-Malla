@@ -82,7 +82,7 @@ export const Course = ({ course, allCourses }) => {
 
         <div className="flex justify-between p-1">
           {boolViewSigla ? (
-              <div className={`flex w-full flex-wrap justify-start items-start ${course.req.length === 0 ? 'mb-3.5' : ''}`}>
+              <div className={`flex w-full flex-wrap justify-start items-start ${course.req.length === 0 ? 'mb-5' : ''}`}>
                 {course.req.map((r) => (
                     <div key={r.id} className={`course-code-2 ${r.cc} m-0.5`}>
                       <p className="course-code-2 text-xs">{findCourseNameById(r.id, allCourses)}</p>
@@ -99,7 +99,7 @@ export const Course = ({ course, allCourses }) => {
                   ))}
                 </div>
                 <div className="flex items-center justify-center">
-                  <p className={"h-4 w-10 flex ml-1 justify-center items-center text-xs bg-gray-300"}>ID: {course.id}</p>
+                  <p className={"h-4 w-10 flex ml-1 justify-center mb-0.5 mt-0.5 items-center text-xs bg-gray-300"}>ID: {course.id}</p>
                 </div>
               </>
           )}
