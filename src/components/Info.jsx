@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CourseContext } from "../context/CourseContext";
 import {
     VRA,
     MAT,
@@ -18,6 +19,8 @@ import {
 } from "../utils/colors";
 
 export const Info = () => {
+    const { boolViewSigla } = useContext(CourseContext);
+
     return (
         <div className="flex my-4 items-center mx-auto justify-center flex-col">
             <hr className="w-full my-4 border-gray-300" />
@@ -27,12 +30,11 @@ export const Info = () => {
                     vas aprobando ramos, se van liberando los que tienen prerrequisitos
                 </div>
                 <div className="max-w-lg relative">
-                    <img src={`${import.meta.env.BASE_URL}course-info-new.png`} />
+                    <img src={`${import.meta.env.BASE_URL}${boolViewSigla ? 'course-info-code.png' : 'course-info-id.png'}`} />
                     <div className={`text-blue-400 text-center text-sm p-2`}>
                         * ¡ Curso Ficticio !
                     </div>
                 </div>
-
             </div>
             <hr className="w-full my-4 border-gray-300" />
             <div className="flex items-center mt-2">
