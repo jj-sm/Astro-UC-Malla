@@ -4,12 +4,29 @@
 
 @layer components {
   .course-code{
-    @apply rounded-full h-4 w-4 flex justify-center items-center text-xs;
+    @apply rounded-se-md h-4 w-5 flex justify-center items-center text-xs;
+  }
+
+  .course-credits{
+    @apply rounded-se-md h-4 w-5 flex justify-center items-center text-xs;
+  }
+
+  .course-code-2 {
+    @apply rounded-md h-4 w-16 flex justify-center items-center text-xs;
+  }
+
+  .course-code-circle {
+    @apply rounded-md h-4 w-4 flex justify-center items-center text-xs;
   }
 
   .course-lab{
     @apply rounded-full bg-green-300 h-4 w-4 flex justify-center items-center text-xs;
   }
+
+  .annual-course{
+    @apply bg-red-400 text-black w-5 h-4 rounded-md flex items-center justify-center mr-1;
+  }
+
 }
 
 .line-clamp{

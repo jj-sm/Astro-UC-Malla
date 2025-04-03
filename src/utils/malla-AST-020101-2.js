@@ -151,7 +151,9 @@ export const ramos20222 = [
     year: 2,
     cc: FIZ,
     cr: 10,
-    req: [],
+    req: [
+        {id:3, cc: MAT},
+        {id:9, cc: MAT}],
     lab: true,
     yearly: 0,
   },

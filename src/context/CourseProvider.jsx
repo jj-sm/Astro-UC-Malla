@@ -1,90 +1,83 @@
 import React, { useEffect, useState } from "react";
-import { CourseContext } from "./CourseContext";
-import {ramos20221, ramos20222, ramosFiz2022} from "../utils";
+import { CourseContext } from "../context/CourseContext";
+import { ramos20221, ramos20222, ramosFiz2022 } from "../utils";
 
-//get info from localStorage
-const storedFinishedCourses =
-  JSON.parse(localStorage.getItem("finishedCourses")) || [];
+const storedFinishedCourses = JSON.parse(localStorage.getItem("finishedCourses")) || [];
 const credits = JSON.parse(localStorage.getItem("credits")) || 0;
 const stored = JSON.parse(localStorage.getItem("stored")) || "Malla C020101";
 
 export const CourseProvider = ({ children }) => {
-  //set info from localStorage
-  const [finishedCourses, setFinishedCourses] = useState(storedFinishedCourses);
-  const [totalCredits, setTotalCredits] = useState(credits);
-  const [title, setTitle] = useState(stored);
+    const [finishedCourses, setFinishedCourses] = useState(storedFinishedCourses);
+    const [totalCredits, setTotalCredits] = useState(credits);
+    const [title, setTitle] = useState(stored);
+    const [boolViewSigla, setBoolViewSigla] = useState(true);
 
-  const data =
-      title === "Malla - C020101" ? ramos20221 :
-          title === "Malla - C020101 (Modificada)" ? ramos20222 :
-              title === "Malla - FIZ - >2022" ? ramosFiz2022 :
-                  ramos20221; // Default fallback (optional)
+    const data = title === "Malla - C020101" ? ramos20221 :
+        title === "Malla - C020101 (Modificada)" ? ramos20222 :
+            title === "Malla - FIZ - >2022" ? ramosFiz2022 :
+                ramos20221;
 
+    const allCourses = [...ramos20221, ...ramos20222, ...ramosFiz2022];
 
-  // divide courses by semester
-  const coursesBySemesterAndYear = data.reduce((acc, course) => {
-    const { year, semester } = course;
-    if (!acc[year]) {
-      acc[year] = {};
-    }
-    if (!acc[year][semester]) {
-      acc[year][semester] = [];
-    }
-    acc[year][semester].push(course);
-    return acc;
-  }, {});
+    const coursesBySemesterAndYear = data.reduce((acc, course) => {
+        const { year, semester } = course;
+        if (!acc[year]) {
+            acc[year] = {};
+        }
+        if (!acc[year][semester]) {
+            acc[year][semester] = [];
+        }
+        acc[year][semester].push(course);
+        return acc;
+    }, {});
 
-  //To store finishedCourse and credits
-  useEffect(() => {
-    localStorage.setItem("finishedCourses", JSON.stringify(finishedCourses));
-    localStorage.setItem("credits", JSON.stringify(totalCredits));
-  }, [finishedCourses]);
+    useEffect(() => {
+        localStorage.setItem("finishedCourses", JSON.stringify(finishedCourses));
+        localStorage.setItem("credits", JSON.stringify(totalCredits));
+    }, [finishedCourses]);
 
-  //Store the title
-  useEffect(() => {
-    localStorage.setItem("stored", JSON.stringify(title));
-  }, [title]);
+    useEffect(() => {
+        localStorage.setItem("stored", JSON.stringify(title));
+    }, [title]);
 
-  //To reset everything
-  const handleReset = () => {
-    setTotalCredits(0);
-    setFinishedCourses([]);
-  };
+    const handleReset = () => {
+        setTotalCredits(0);
+        setFinishedCourses([]);
+    };
 
-  //TAKE A COURSE
+    const setViewSigla = () => {
+        setBoolViewSigla(prevState => !prevState);
+    };
 
-  const handleClick = course => {
-    const isFinished = finishedCourses.includes(course.id);
-    if (!isFinished) {
-      if (course.cr) setTotalCredits(state => state + course.cr);
+    const handleClick = course => {
+        const isFinished = finishedCourses.includes(course.id);
+        if (!isFinished) {
+            if (course.cr) setTotalCredits(state => state + course.cr);
+            setFinishedCourses(prevFinishedCourses => [...prevFinishedCourses, course.id]);
+        } else {
+            if (course.cr) setTotalCredits(state => state - course.cr);
+            setFinishedCourses(prevFinishedCourses => prevFinishedCourses.filter(id => id != course.id));
+        }
+    };
 
-      setFinishedCourses(prevFinishedCourses => [
-        ...prevFinishedCourses,
-        course.id,
-      ]);
-    } else {
-      if (course.cr) setTotalCredits(state => state - course.cr);
-      setFinishedCourses(prevFinishedCourses =>
-        prevFinishedCourses.filter(id => id != course.id)
-      );
-    }
-  };
-
-  return (
-    <CourseContext.Provider
-      value={{
-        title,
-        setTitle,
-        handleReset,
-        totalCredits,
-        setTotalCredits,
-        finishedCourses,
-        setFinishedCourses,
-        coursesBySemesterAndYear,
-        handleClick,
-      }}
-    >
-      {children}
-    </CourseContext.Provider>
-  );
+    return (
+        <CourseContext.Provider
+            value={{
+                title,
+                setTitle,
+                handleReset,
+                totalCredits,
+                setTotalCredits,
+                finishedCourses,
+                setFinishedCourses,
+                coursesBySemesterAndYear,
+                handleClick,
+                allCourses,
+                boolViewSigla,
+                setViewSigla
+            }}
+        >
+            {children}
+        </CourseContext.Provider>
+    );
 };

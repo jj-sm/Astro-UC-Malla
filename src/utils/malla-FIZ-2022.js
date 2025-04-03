@@ -359,7 +359,7 @@ export const ramosFiz2022 = [
     yearly: 0,
   },
   {
-    id: 27,
+    id: 28,
     code: "FIZ0613",
     course: "Física Experimental III",
     semester: "II",
@@ -373,7 +373,7 @@ export const ramosFiz2022 = [
     yearly: 0,
   },
   {
-    id: 28,
+    id: 29,
     code: "FIZ0322",
     course: "Física Cuántica I",
     semester: "II",
@@ -387,7 +387,7 @@ export const ramosFiz2022 = [
     yearly: 2,
   },
   {
-    id: 29,
+    id: 30,
     code: "OPR",
     course: "Optativo de Profundización",
     semester: "II",
@@ -399,7 +399,7 @@ export const ramosFiz2022 = [
     yearly: 0,
   },
   {
-    id: 30,
+    id: 31,
     code: "OFG",
     course: "Formación General",
     semester: "II",
@@ -413,7 +413,7 @@ export const ramosFiz2022 = [
     // Year 4
     // Semester 1
   {
-    id: 31,
+    id: 32,
     code: "FIZ0411",
     course: "Mecánica Estadística",
     semester: "I",
@@ -425,36 +425,24 @@ export const ramosFiz2022 = [
     yearly: 1,
   },
   {
-    id: 32,
+    id: 33,
     code: "FIZ0412",
     course: "Física Cuántica II",
     semester: "I",
     year: 4,
     cc: FIZ,
     cr: 10,
-    req: [{id: 28, cc: FIZ}],
+    req: [{id: 29, cc: FIZ}], // cuántica
     lab: false,
     yearly: 1,
   },
   {
-    id: 33,
+    id: 34,
     code: "OPR",
     course: "Optativo de Profundización",
     semester: "I",
     year: 4,
     cc: OPR,
-    cr: 10,
-    req: [],
-    lab: false,
-    yearly: 0,
-  },
-  {
-    id: 34,
-    code: "OFG",
-    course: "Formación General",
-    semester: "I",
-    year: 4,
-    cc: OFG,
     cr: 10,
     req: [],
     lab: false,
@@ -472,9 +460,21 @@ export const ramosFiz2022 = [
     lab: false,
     yearly: 0,
   },
-    // Semester 2
   {
     id: 36,
+    code: "OFG",
+    course: "Formación General",
+    semester: "I",
+    year: 4,
+    cc: OFG,
+    cr: 10,
+    req: [],
+    lab: false,
+    yearly: 0,
+  },
+    // Semester 2
+  {
+    id: 37,
     code: "FIZ0614",
     course: "Física Experimental Avanzada",
     semester: "II",
@@ -482,21 +482,9 @@ export const ramosFiz2022 = [
     cc: FIZ,
     cr: 10,
     req: [
-        {id: 27, cc: FIZ},
-        {id: 28, cc: FIZ}],
+        {id: 28, cc: FIZ}, // fiz exp iii
+        {id: 29, cc: FIZ}], // cuántica
     lab: true,
-    yearly: 0,
-  },
-  {
-    id: 37,
-    code: "OPR",
-    course: "Optativo de Profundización",
-    semester: "II",
-    year: 4,
-    cc: OPR,
-    cr: 10,
-    req: [],
-    lab: false,
     yearly: 0,
   },
   {
@@ -513,6 +501,18 @@ export const ramosFiz2022 = [
   },
   {
     id: 39,
+    code: "OPR",
+    course: "Optativo de Profundización",
+    semester: "II",
+    year: 4,
+    cc: OPR,
+    cr: 10,
+    req: [],
+    lab: false,
+    yearly: 0,
+  },
+  {
+    id: 40,
     code: "OFG",
     course: "Formación General",
     semester: "II",
@@ -525,7 +525,7 @@ export const ramosFiz2022 = [
   },
     // Final Semester
   {
-    id: 40,
+    id: 41,
     code: "FIZ2511",
     course: "Práctica de Licenciatura",
     semester: "I",
