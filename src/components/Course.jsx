@@ -35,8 +35,8 @@ export const Course = ({ course, allCourses }) => {
   return (
       <div
           className={`w-36 bg-gray-600 mb-2 rounded-lg hover:cursor-pointer ${
-              isFinished ? "custom-line" : ""
-          } ${!takeCourse ? "opacity-50" : ""} mx-1`}
+              isFinished ? "custom-line shadow-xl" : "shadow-xl"
+          } ${!takeCourse ? "shadow-xl opacity-50" : "shadow-xl"} mx-1`}
       >
         <div className="flex justify-between items-center h-6">
           <a
