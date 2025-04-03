@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import { CourseContext } from "../context/CourseContext";
 import { ramos20221, ramos20222, ramosFiz2022 } from "../utils";
 
@@ -17,7 +18,6 @@ export const CourseProvider = ({ children }) => {
             title === "Malla - FIZ - >2022" ? ramosFiz2022 :
                 ramos20221;
 
-    // Ensure each course has a 'completed' property (default to false if not defined)
     const dataWithCompleted = data.map(course => ({
         ...course,
         completed: course.completed !== undefined ? course.completed : false,
@@ -89,4 +89,8 @@ export const CourseProvider = ({ children }) => {
             {children}
         </CourseContext.Provider>
     );
+};
+
+CourseProvider.propTypes = {
+    children: PropTypes.node.isRequired,
 };
