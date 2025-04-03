@@ -19,7 +19,7 @@ export const Navbar = ({ showPopup }) => {
                     <p className="mr-2 text-blue-300">{title}</p>
                 </span>
 
-                <div className="ml-auto flex items-center mt-1">
+                <div className="mx-auto sm:mr-2 flex items-center my-1">
                     <Button className={showPopup ? "breathing-effect" : ""} />
                     <button
                         onClick={toggleMenu}
