@@ -89,7 +89,7 @@ export const Course = ({ course }) => {
             {/* Creditos */}
             <p
                 className={`${
-                    course.cr ? "bg-white" : ""
+                    course.cr != null ? "bg-white" : ""
                 } h-4 w-4 text-center text-xs`}
             >
               {course.cr}
