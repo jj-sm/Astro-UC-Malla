@@ -22,7 +22,7 @@ export const Info = () => {
     const { boolViewSigla } = useContext(CourseContext);
 
     return (
-        <div className="flex my-4 items-center mx-auto justify-center flex-col mx-5">
+        <div className="flex my-4 items-center justify-center flex-col mx-5">
             <hr className="w-full my-4 border-gray-300" />
             <div className="flex flex-col sm:flex-row items-center">
                 <div className="w-full sm:w-80 text-justify sm:block sm:mr-16 mb-4 sm:mb-0">
