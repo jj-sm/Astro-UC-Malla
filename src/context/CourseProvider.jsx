@@ -17,9 +17,18 @@ export const CourseProvider = ({ children }) => {
             title === "Malla - FIZ - >2022" ? ramosFiz2022 :
                 ramos20221;
 
-    const allCourses = [...ramos20221, ...ramos20222, ...ramosFiz2022];
+    // Ensure each course has a 'completed' property (default to false if not defined)
+    const dataWithCompleted = data.map(course => ({
+        ...course,
+        completed: course.completed !== undefined ? course.completed : false,
+    }));
 
-    const coursesBySemesterAndYear = data.reduce((acc, course) => {
+    const allCourses = [...ramos20221, ...ramos20222, ...ramosFiz2022].map(course => ({
+        ...course,
+        completed: course.completed !== undefined ? course.completed : false,
+    }));
+
+    const coursesBySemesterAndYear = dataWithCompleted.reduce((acc, course) => {
         const { year, semester } = course;
         if (!acc[year]) {
             acc[year] = {};
