@@ -22,16 +22,16 @@ export const Info = () => {
     const { boolViewSigla } = useContext(CourseContext);
 
     return (
-        <div className="flex my-4 items-center mx-auto justify-center flex-col">
+        <div className="flex my-4 items-center mx-auto justify-center flex-col mx-5">
             <hr className="w-full my-4 border-gray-300" />
-            <div className="flex items-center">
-                <div className="w-80 text-justify sm:block hidden mr-16">
+            <div className="flex flex-col sm:flex-row items-center">
+                <div className="w-full sm:w-80 text-justify sm:block sm:mr-16 mb-4 sm:mb-0">
                     Puedes tachar tus ramos aprobados haciendo click en ellos. A medida que
                     vas aprobando ramos, se van liberando los que tienen prerrequisitos
                 </div>
                 <div className="max-w-lg relative">
                     <img src={`${import.meta.env.BASE_URL}${boolViewSigla ? 'course-info-code.png' : 'course-info-id.png'}`} />
-                    <div className={`text-blue-400 text-center text-sm p-2`}>
+                    <div className="text-blue-400 text-center text-sm p-2">
                         * ¡ Curso Ficticio !
                     </div>
                 </div>

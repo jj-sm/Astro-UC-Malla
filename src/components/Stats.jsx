@@ -15,15 +15,15 @@ export const Stats = () => {
     const { totalCreditsRequired, totalCourses } = curriculumStats[title] || curriculumStats["Malla - C020101"];
 
     return (
-        <div className="text-center -mt-2 mb-7">
+        <div className="text-center -mt-2 mb-7 mx-4">
             <h2 className="font-bold text-xl">Estadísticas</h2>
-            <div className="flex justify-center mt-4">
-                <div className="flex mr-12">
+            <div className="flex flex-col sm:flex-row justify-center mt-4">
+                <div className="flex flex-col sm:flex-row mr-0 sm:mr-12 mb-4 sm:mb-0">
                     <p className="mr-2">Créditos Totales: {totalCredits}</p>
                     <p>({((totalCredits * 100) / totalCreditsRequired).toFixed(1)}%)</p>
                 </div>
 
-                <div className="flex">
+                <div className="flex flex-col sm:flex-row">
                     <p className="mr-2">Ramos Aprobados: {finishedCourses.length}</p>
                     <p>({((finishedCourses.length * 100) / totalCourses).toFixed(1)}%)</p>
                 </div>

@@ -4,7 +4,7 @@ export const Footer = () => {
     return (
         <div className="flex justify-center font-mono text-sm text-[#BDBDBD] bg-[#ADD8E6] pb-2 mt-8 pt-2">
             <div
-                className="flex hover:cursor-pointer text-blue-950"
+                className="flex hover:cursor-pointer text-blue-950 mx-4 text-center"
                 onClick={() => window.open("https://github.com/jj-sm", "_black")}
             >
                 <p>
