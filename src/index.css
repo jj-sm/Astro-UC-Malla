@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 @layer components {
-  .course-code{
+  .course-code {
     @apply rounded-se-md h-4 w-5 flex justify-center items-center text-xs;
   }
 
-  .course-credits{
+  .course-credits {
     @apply rounded-se-md h-4 w-5 flex justify-center items-center text-xs;
   }
 
@@ -19,17 +19,16 @@
     @apply rounded-md h-4 w-4 flex justify-center items-center text-xs;
   }
 
-  .course-lab{
+  .course-lab {
     @apply rounded-full bg-green-300 h-4 w-4 flex justify-center items-center text-xs;
   }
 
-  .annual-course{
+  .annual-course {
     @apply bg-red-400 text-black w-5 h-4 rounded-md flex items-center justify-center mr-1;
   }
-
 }
 
-.line-clamp{
+.line-clamp {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -61,10 +60,18 @@
   animation: slideIn 0.2s ease-out;
 }
 
+@keyframes slideOut {
+  from {
+    height: 5px;
+  }
+  to {
+    height: 0;
+  }
+}
+
 .custom-line.out::before {
   animation: slideOut 0.5s ease-out forwards;
 }
-
 
 @keyframes breathing {
   0% {
@@ -83,4 +90,3 @@
 }
 
 /*new*/
-

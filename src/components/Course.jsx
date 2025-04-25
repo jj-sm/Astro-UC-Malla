@@ -85,7 +85,17 @@ export const Course = ({ course, allCourses }) => {
               <div className={`flex w-full flex-wrap justify-start items-start ${course.req.length === 0 ? 'mb-5' : ''}`}>
                 {course.req.map((r) => (
                     <div key={r.id} className={`course-code-2 ${r.cc} m-0.5`}>
-                      <p className="course-code-2 text-xs">{findCourseNameById(r.id, allCourses)}</p>
+                      <p className="course-code-2 text-xs">
+                        <a
+                            href={`https://buscacursos.uc.cl/?cxml_sigla=${findCourseNameById(r.id, allCourses)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-black text-xs justify-center text-center hover:underline"
+                        >
+                          {findCourseNameById(r.id, allCourses)}
+                        </a>
+                      </p>
+
                     </div>
                 ))}
               </div>
