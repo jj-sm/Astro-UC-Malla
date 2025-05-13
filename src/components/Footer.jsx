@@ -9,7 +9,7 @@ export const Footer = () => {
             >
                 <p>
                     Forked from <span className="font-bold"> loretito</span>.
-                    Adapted, updated and formatted by <span className="font-bold"> jj-sm</span> (Astro)
+                    Adapted, updated and formatted by <span className="font-bold">jj-sm</span> (Astro)
                 </p>
                 <img
                     src={`${import.meta.env.BASE_URL}github-black.svg`}
