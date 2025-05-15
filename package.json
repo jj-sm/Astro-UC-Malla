@@ -10,7 +10,8 @@
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d dist -b gh-pages --dest Astro-UC-Malla && gh-pages -d dist"
+    "deploy": "gh-pages -d dist -b gh-pages --dest Astro-UC-Malla && gh-pages -d dist",
+    "deploy-dist": "gh-pages -d dist -b dist"
   },
   "dependencies": {
     "react": "^18.2.0",
