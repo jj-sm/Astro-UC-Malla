@@ -20,6 +20,18 @@ import {
 
 export const ramos20222 = [
   {
+    id: 1,
+    code: "AST0111",
+    course: "Astro 0",
+    semester: "II",
+    year: 1,
+    cc: AST,
+    cr: 10,
+    req: [],
+    lab: false,
+    yearly: 0,
+  },
+    {
     id: 2,
     code: "MAT1103",
     course: "Álgebra y Geometría",
@@ -106,14 +118,17 @@ export const ramos20222 = [
 
 // 2nd Semester
   {
-    id: 1,
-    code: "AST111",
-    course: "Astro 0",
+    id: 12,
+    code: "AST211",
+    course: "Introducción al Análisis de Datos", //Intro al anali. datos AST211 Yr 2, sem 1, lab: false, yearly:1
     semester: "I",
     year: 2,
     cc: AST,
     cr: 10,
-    req: [],
+    req: [
+      {id: 3, cc: MAT },
+      {id: 4, cc: IIC },
+      {id: 1, cc: AST }],
     lab: false,
     yearly: 1,
   },
@@ -147,13 +162,41 @@ export const ramos20222 = [
     id: 8,
     code: "FIZ121",
     course: "Mecánica Clásica I",
-    semester: "II",
+    semester: "I",
     year: 2,
     cc: FIZ,
     cr: 10,
     req: [
         {id:3, cc: MAT},
         {id:9, cc: MAT}],
+    lab: true,
+    yearly: 0,
+  },
+  {
+    id: 17,
+    code: "AST221",
+    course: "Taller de Astronomía",
+    semester: "II",
+    year: 2,
+    cc: AST,
+    cr: 10,
+    req: [
+      {id: 12, cc: AST }],
+    lab: false,
+    yearly: 2,
+  },
+  {
+    id: 13,
+    code: "FIZ210",
+    course: "Termodinámica y Teoría Cinética",
+    semester: "II",
+    year: 2,
+    cc: FIZ,
+    cr: 10,
+    req: [
+      {id: 3, cc: MAT },
+      {id: 9, cc: MAT },
+      {id: 8, cc: FIZ }],
     lab: true,
     yearly: 0,
   },
@@ -186,18 +229,6 @@ export const ramos20222 = [
     yearly: 0,
   },
   {
-    id: 30,
-    code: "TTF",
-    course: "Teológico",
-    semester: "II",
-    year: 2,
-    cc: TTF,
-    cr: 10,
-    req: [],
-    lab: false,
-    yearly: 0,
-  },
-  {
     id: 16,
     code: "OFG",
     course: "Formación General",
@@ -210,49 +241,19 @@ export const ramos20222 = [
     yearly: 0,
   },
   {
-    id: 12,
-    code: "AST211",
-    course: "Introducción al Análisis de Datos", //Intro al anali. datos AST211 Yr 2, sem 1, lab: false, yearly:1
+    id: 22,
+    code: "AST0311",
+    course: "Astrofísica General",
     semester: "I",
     year: 3,
     cc: AST,
     cr: 10,
     req: [
-      {id: 3, cc: MAT },
-      {id: 4, cc: IIC },
-      {id: 1, cc: AST }],
+      {id: 15, cc: MAT },
+      {id: 17, cc: AST },
+      {id: 13, cc: FIZ }],
     lab: false,
     yearly: 1,
-  },
-  {
-    id: 13,
-    code: "FIZ210",
-    course: "Termodinámica y Teoría Cinética",
-    semester: "I",
-    year: 3,
-    cc: FIZ,
-    cr: 10,
-    req: [
-      {id: 3, cc: MAT },
-      {id: 9, cc: MAT },
-      {id: 8, cc: FIZ }],
-    lab: true,
-    yearly: 0,
-  },
-
-  // 2nd Semester
-  {
-    id: 17,
-    code: "AST221",
-    course: "Taller de Astronomía",
-    semester: "II",
-    year: 3,
-    cc: AST,
-    cr: 10,
-    req: [
-      {id: 12, cc: AST }],
-    lab: false,
-    yearly: 2,
   },
   {
     id: 18,
@@ -268,6 +269,9 @@ export const ramos20222 = [
     lab: false,
     yearly: 0,
   },
+
+
+  // 2nd Semester
   {
     id: 21,
     code: "OFG",
@@ -283,19 +287,6 @@ export const ramos20222 = [
   // 3rd Year
   // 1st Semester
   {
-    id: 25,
-    code: "FIZ0313",
-    course: "Métodos de la Física Matemática II",
-    semester: "I",
-    year: 3,
-    cc: FIZ,
-    cr: 10,
-    req: [
-      {id: 15, cc: MAT }],
-    lab: false,
-    yearly: 1,
-  },
-  {
     id: 19,
     code: "FIZ0221",
     course: "Electricidad y Magnetismo",
@@ -307,6 +298,18 @@ export const ramos20222 = [
       {id: 14, cc: MAT },
       {id: 8, cc: FIZ }],
     lab: true,
+    yearly: 0,
+  },
+  {
+    id: 30,
+    code: "TTF",
+    course: "Teológico",
+    semester: "I",
+    year: 3,
+    cc: TTF,
+    cr: 10,
+    req: [],
+    lab: false,
     yearly: 0,
   },
   {
@@ -353,17 +356,15 @@ export const ramos20222 = [
   },
   // 2nd Semester
   {
-    id: 22,
-    code: "AST0311",
-    course: "Astrofísica General",
+    id: 25,
+    code: "FIZ0313",
+    course: "Métodos de la Física Matemática II",
     semester: "I",
     year: 4,
-    cc: AST,
+    cc: FIZ,
     cr: 10,
     req: [
-      {id: 15, cc: MAT },
-      {id: 17, cc: AST },
-      {id: 13, cc: FIZ }],
+      {id: 15, cc: MAT }],
     lab: false,
     yearly: 1,
   },
